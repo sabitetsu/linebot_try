@@ -12,6 +12,9 @@ from linebot.models import (
 import os
 import random
 
+from dotenv import load_dotenv
+load_dotenv()
+
 app = Flask(__name__)
 
 #環境変数取得
@@ -52,3 +55,4 @@ if __name__ == "__main__":
 #    app.run()
     port = int(os.getenv("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
